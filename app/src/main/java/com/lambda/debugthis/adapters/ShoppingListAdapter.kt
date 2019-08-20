@@ -1,11 +1,13 @@
-package com.lambda.debugthis
+package com.lambda.debugthis.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.lambda.debugthis.ShoppingRepository.Companion.shoppingList
+import com.lambda.debugthis.R
+import com.lambda.debugthis.models.ShoppingItem
+import com.lambda.debugthis.data.ShoppingRepository.Companion.shoppingList
 import kotlinx.android.synthetic.main.shopping_item_content.view.*
 
 class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>() {

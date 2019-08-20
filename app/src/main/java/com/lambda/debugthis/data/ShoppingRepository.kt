@@ -1,4 +1,6 @@
-package com.lambda.debugthis
+package com.lambda.debugthis.data
+
+import com.lambda.debugthis.models.ShoppingItem
 
 class ShoppingRepository {
     companion object {

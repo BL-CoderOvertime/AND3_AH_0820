@@ -1,4 +1,6 @@
-package com.lambda.debugthis
+package com.lambda.debugthis.data
+
+import com.lambda.debugthis.R
 
 val itemIds = intArrayOf(
     R.drawable.almond,

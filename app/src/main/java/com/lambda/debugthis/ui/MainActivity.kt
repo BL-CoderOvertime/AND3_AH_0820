@@ -1,4 +1,4 @@
-package com.lambda.debugthis
+package com.lambda.debugthis.ui
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.lambda.debugthis.R
+import com.lambda.debugthis.adapters.ShoppingListAdapter
+import com.lambda.debugthis.data.ShoppingRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
