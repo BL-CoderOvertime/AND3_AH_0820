@@ -3,6 +3,9 @@ package com.lambda.debugthis.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.lambda.debugthis.R
@@ -39,9 +42,9 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val itemImageView = view.iv_shopping_item
-        val itemNameView = view.tv_shopping_item_name
-        val shoppingItemParent = view.cv_shopping_list_item
+        private val itemImageView: ImageView = view.iv_shopping_item
+        private val itemNameView: TextView = view.tv_shopping_item_name
+        val shoppingItemParent: CardView = view.cv_shopping_list_item
 
         fun bindModel(item: ShoppingItem) {
             itemImageView.setImageResource(item.imageID)

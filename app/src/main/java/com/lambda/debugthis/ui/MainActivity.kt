@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lambda.debugthis.R
@@ -16,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             fun getList(): String {
                 var listString = ""
                 for (item in ShoppingRepository.shoppingList) {
-                    if (item.isAdded) listString += "${item.itemName}" + ", "
+                    if (item.isAdded) listString += item.itemName + ", "
                 }
                 listString = listString.trimEnd(',', ' ')
 
